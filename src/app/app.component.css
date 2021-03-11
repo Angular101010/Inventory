@@ -1,4 +1,18 @@
-.img-responsive {
+/* .img-responsive {
 height: 760px;
 width: 1550px;
+} */
+
+#container {
+    background-image:url(/assets/bgwood.jpg);
+    background-position:auto;
+    height: 760px;
+    width: 1550px;
 }
+
+/* .formslistinfo{
+    Color:''
+} */
+/* <div>
+    <img class="img-responsive" src="../assets/bgwood.jpg">
+ </div> */
