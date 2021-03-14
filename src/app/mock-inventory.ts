@@ -1,14 +1,14 @@
 import { Inventory } from './inventory';
 
 export const INVENTORIES: Inventory[] = [
-  { id: 11, name: 'Scott' },
-  { id: 12, name: 'Ken' },
-  { id: 13, name: 'Jill' },
-  { id: 14, name: 'Jared' },
-  { id: 15, name: 'Brandon' },
-  { id: 16, name: 'Logan' },
-  { id: 17, name: 'Mark' },
-  { id: 18, name: 'Kent' },
-  { id: 19, name: 'Glenn' },
-  { id: 20, name: 'Ryan' }
+  { id: 1, name: 'Sam' },
+  { id: 2, name: 'Ken' },
+  { id: 3, name: 'Jill' },
+  { id: 4, name: 'Jared' },
+  { id: 5, name: 'Brandon' },
+  { id: 6, name: 'Logan' },
+  { id: 7, name: 'Mark' },
+  { id: 8, name: 'Kent' },
+  { id: 9, name: 'Glenn' },
+  { id: 10, name: 'Ryan' }
 ];

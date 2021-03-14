@@ -3,23 +3,23 @@
   <a href="Icon"><img src="https://ionsolar.com/wp-content/themes/ion-solar/assets/img/ion_square.png"
       class="img-responsive" class="img-fluid flex-center"></a>
   <a href="#PC"><i class="fa fa-desktop fa-pull-left" aria-hidden="true"></i> PCS</a>
-<a href="#Monitors"><i class="fa fa-adjust fa-pull-left" aria-hidden="true"></i>Monitors</a>
-<a href="#Cables"><i class="fa fa-code-fork fa-pull-left" aria-hidden="true"></i>Cables</a>
-  </div>
+  <a href="#Monitors"><i class="fa fa-adjust fa-pull-left" aria-hidden="true"></i>Monitors</a>
+  <a href="#Cables"><i class="fa fa-code-fork fa-pull-left" aria-hidden="true"></i>Cables</a>
 
-  <!-- For Now it holds the list info -->
-  <div id="containerformslist">
-    <h2>Inventory App</h2>
+</div>
 
-    <div *ngIf="selectedInventory">
-      <h2>{{selectedInventory.name}} Details</h2>
-      <div><span>id: </span>{{selectedInventory.id}}</div>
-    </div>
+<!-- For Now it holds the list info -->
+<div id="containerformslist">
+  <h2>Inventory App</h2>
 
-    <ul class="inventories">
-      <li *ngFor="let inventory of inventories"
-        (click)="onSelect(inventory)"> 
-        <span class="badge">{{ inventory.id }}</span> {{ inventory.name}}
-      </li>
-    </ul>
+  <app-inventory-detail [inventory]="selectedInventory"></app-inventory-detail>
+
+  <ul class="inventories">
+    <li [class.selected]="inventory === selectedInventory" *ngFor="let inventory of inventories"
+      (click)="onSelect(inventory)"> 
+      <span class="badge">{{ inventory.id }}</span> {{ inventory.name}}
+      
+      
+    </li>
+  </ul>
 </div>

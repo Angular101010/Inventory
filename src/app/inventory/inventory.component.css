@@ -74,7 +74,7 @@
   left: .1em;
 }
 .inventories li.selected {
-  background-color: black;
+  background-color: lightblue;
   color: white;
 }
 .inventories li.selected:hover {
@@ -82,7 +82,7 @@
   color: white;
 }
 .inventories li.selected:active {
-  background-color: black;
+  background-color:grey;
   color: white;
 }
 .inventories .badge {
@@ -94,9 +94,9 @@
   line-height: 1em;
   position: relative;
   left: -1px;
-  top: -4px;
-  height: 2.0em;
-  margin-right: .8em;
+  top: -3.7px;
+  height: 2.1em;
+  margin-right: .9em;
   border-radius: 4px 0 0 4px;
 }
 
