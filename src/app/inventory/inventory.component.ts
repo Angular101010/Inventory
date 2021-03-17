@@ -19,7 +19,9 @@ selectedInventory?: Inventory;
   }
 
   getInventories() {
-    this.inventories = this.inventoryService.getInventories();
+    this.inventoryService.getInventories()
+    .subscribe(inventories => (this.inventories = inventories)
+    );
   }
   onSelect(inventory: Inventory): void {
     this.selectedInventory = inventory;

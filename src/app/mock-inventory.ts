@@ -1,9 +1,9 @@
 import { Inventory } from './inventory';
 
 export const INVENTORIES: Inventory[] = [
-  { id: 1, name: 'Sam' },
+  { id: 1, name: 'Samuel' },
   { id: 2, name: 'Ken' },
-  { id: 3, name: 'Jill' },
+  { id: 3, name: 'Lauren' },
   { id: 4, name: 'Jared' },
   { id: 5, name: 'Brandon' },
   { id: 6, name: 'Logan' },
