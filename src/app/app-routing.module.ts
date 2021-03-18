@@ -1,13 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InventoryComponent } from './inventory/inventory.component';
+import {DashboardComponent} from './dashboard/dashboard.component'
 
 const routes: Routes = [
-  {path: 'inventories', component: InventoryComponent}
-  // {path: 'inventory', component: InventoryComponent},
-  // {path: 'inventory', component: InventoryComponent},
-];
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  {path: 'inventories', component: InventoryComponent},
+  {path: 'dashboard', component: DashboardComponent}
+  
+]
 
+// {
+//   [ {path: 'dashboard', component: DashboardComponent} 
+   
+//   ];
+   
+  
 @NgModule({
   imports: [RouterModule.forRoot(routes) ],
   exports: [RouterModule]
