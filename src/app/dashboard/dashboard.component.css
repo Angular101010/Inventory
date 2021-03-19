@@ -13,19 +13,20 @@
   
   /* Style sidebar links */
   .sidebar a {
-    padding: 10px 12px 10px 16px;
+    padding: 12px 12px 12px 16px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 21px;
     color: #1b0505;
     display:inline-block;
   }
   
   
   /* Style links on mouse-over */
-  .sidebar a:hover {
+  .sidebar a:hover  {
     color: #f1f1f1;
     
   }
+
   
   /* Style the main content */
   .main {
