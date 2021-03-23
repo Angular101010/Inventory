@@ -1,11 +1,11 @@
 <div *ngIf="inventory">
 
     <h2>{{inventory.name | uppercase}} Details</h2>
-    <div><span>Id: </span>{{inventory.id}}</div>
     <div>
         <label>Name:
             <input [(ngModel)]="inventory.name"
             placeholder="name" />
+            <div><span>Id: </span>{{inventory.id}}</div>
         </label>
         </div>
         </div> 
