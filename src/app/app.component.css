@@ -3,12 +3,13 @@ height: 760px;
 width: 1550px;
 } */
 
-/* #container {
+ #container {
     background-image:url(/assets/bgwood.jpg);
     background-position:auto;
+    overflow: scroll;
     height: 760px;
     width: 1550px;
-} */
+} 
 /* nav a {
     padding: 1rem;
     text-decoration: none;
