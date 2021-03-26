@@ -6,7 +6,7 @@ import { DataTableDataSource, DataTableItem } from './data-table-datasource';
 
 @Component({
   selector: 'app-data-table',
-  templateUrl: './data-table.component.html',
+  templateUrl:'./data-table.component.html',
   styleUrls: ['./data-table.component.css']
 })
 export class DataTableComponent implements AfterViewInit {
@@ -16,7 +16,7 @@ export class DataTableComponent implements AfterViewInit {
   dataSource: DataTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['id', 'name', 'model', 'CPU', 'ram'];
 
   constructor() {
     this.dataSource = new DataTableDataSource();

@@ -12,6 +12,24 @@
       <td mat-cell *matCellDef="let row">{{row.name}}</td>
     </ng-container>
 
+    <!-- Model Column -->
+    <ng-container matColumnDef="model">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Model</th>
+      <td mat-cell *matCellDef="let row">{{row.model}}</td>
+    </ng-container>
+
+    <!-- CPU Column -->
+    <ng-container matColumnDef="CPU">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>CPU</th>
+      <td mat-cell *matCellDef="let row">{{row.CPU}}</td>
+    </ng-container>
+
+    <!-- ram Column -->
+    <ng-container matColumnDef="ram">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header>Ram</th>
+      <td mat-cell *matCellDef="let row">{{row.ram}}</td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 

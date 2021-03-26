@@ -8,30 +8,33 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 export interface DataTableItem {
   name: string;
   id: number;
+  model: string;
+  CPU: string;
+  ram: string;
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: DataTableItem[] = [
-  {id: 1, name: 'Sam'},
-  {id: 2, name: 'Bill'},
-  {id: 3, name: 'Robert'},
-  {id: 4, name: 'Brandon'},
-  {id: 5, name: 'Kent'},
-  {id: 6, name: 'Mark'},
-  {id: 7, name: 'Jared'},
-  {id: 8, name: 'Lauren'},
-  {id: 9, name: 'Cedrick'},
-  {id: 10, name: 'Parker'},
-  {id: 11, name: 'Batman'},
-  {id: 12, name: 'Ironman'},
-  {id: 13, name: 'Brainiac'},
-  {id: 14, name: 'Superman'},
-  {id: 15, name: 'Star Lord'},
-  {id: 16, name: 'Thrall'},
-  {id: 17, name: 'Anduwin'},
-  {id: 18, name: 'Frodo'},
-  {id: 19, name: 'Gandolf'},
-  {id: 20, name: 'Quill'},
+  {id: 1, name: 'Sam', model: 'Dell 7020', CPU:'i5-3470', ram:'16.0 GB' },
+  {id: 2, name: 'Bill', model: 'Dell 9010', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 3, name: 'Robert', model:  'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 4, name: 'Brandon', model:  'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 5, name: 'Kent', model: 'Dell 9010', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 6, name: 'Mark', model:  'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 7, name: 'Jared', model:  'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 8, name: 'Lauren', model: 'Dell 9020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 9, name: 'Cedrick', model:  'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 10, name: 'Parker', model: 'Dell 9010', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 11, name: 'Batman', model:  'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 12, name: 'Ironman', model: 'Dell 9020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 13, name: 'Brainiac', model:  'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 14, name: 'Superman', model: 'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 15, name: 'Star Lord', model: 'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 16, name: 'Thrall', model: 'Dell 9020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 17, name: 'Anduwin', model: 'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 18, name: 'Frodo', model: 'Dell 9010', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 19, name: 'Gandolf', model: 'Dell 9020', CPU:'i5-3470', ram:'16.0 GB'},
+  {id: 20, name: 'Quill', model: 'Dell 7020', CPU:'i5-3470', ram:'16.0 GB'},
 ];
 
 /**
@@ -99,6 +102,9 @@ export class DataTableDataSource extends DataSource<DataTableItem> {
       switch (this.sort?.active) {
         case 'name': return compare(a.name, b.name, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'model': return compare(+a.model, +b.model, isAsc);
+        case 'CPU': return compare(+a.CPU, +b.CPU, isAsc);
+        case 'ram': return compare(+a.ram, +b.ram, isAsc);
         default: return 0;
       }
     });
